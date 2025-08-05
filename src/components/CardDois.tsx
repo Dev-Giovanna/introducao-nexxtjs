@@ -2,10 +2,11 @@
 type cardPorps = {
   title: string,
   description: string,
-  imageUrl: string // URL ou caminho da imagem
+  imageUrl: string, 
+  category: string
 }
 
-export function CardDois({ title, description, imageUrl }: cardPorps) {
+export function CardDois({ title, description, imageUrl, category }: cardPorps) {
   return (
     <div className="
       bg-blue-50
@@ -27,6 +28,10 @@ export function CardDois({ title, description, imageUrl }: cardPorps) {
       <h3 className="text-2xl font-bold text-black mb-2">
         {title}
       </h3>
+
+      <p className="text-gray-800 font-extrabold">
+        {category}
+      </p>
 
       <p className="text-gray-600 leading-relaxed">
         {description}
