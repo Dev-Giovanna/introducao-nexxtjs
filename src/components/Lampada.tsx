@@ -7,14 +7,13 @@ export default function Lampada() {
 
   return (
     <div className="flex flex-col items-center gap-6 p-6">
-      {/* Imagem da lâmpada */}
+      
       <img
         src={ligada ? "/lampadaligada.jpg" : "/lampadadesligada.jpg"}
         alt={ligada ? "Lâmpada ligada" : "Lâmpada desligada"}
         className="w-40 transition duration-500"
       />
 
-      {/* Botão deslizante */}
       <div
         onClick={() => setLigada(!ligada)}
         className={`w-20 h-10 flex items-center rounded-full p-1 cursor-pointer transition-colors duration-300 ${
